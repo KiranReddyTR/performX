@@ -1,7 +1,8 @@
 import Link from "next/link";
-import { Mail, Phone, ArrowUpRight } from "lucide-react";
+import { Mail, Phone } from "lucide-react";
 import { Logo } from "@/components/ui/Logo";
 import { Button } from "@/components/ui/Button";
+import { NewsletterInline } from "@/components/forms/NewsletterInline";
 
 const footerLinks = {
   Services: [
@@ -43,27 +44,7 @@ export function Footer() {
             <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
               Growth insights, direct to your inbox.
             </h2>
-            <form
-              className="flex flex-col sm:flex-row gap-3"
-              onSubmit={(e) => e.preventDefault()}
-              aria-label="Newsletter signup"
-            >
-              <label htmlFor="footer-email" className="sr-only">Email address</label>
-              <input
-                id="footer-email"
-                type="email"
-                placeholder="your@email.com"
-                required
-                className="flex-1 bg-white/5 border border-white/10 text-white placeholder:text-white/30 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-violet/50 focus:ring-1 focus:ring-brand-violet/30 transition-colors"
-                aria-describedby="newsletter-hint"
-              />
-              <button
-                type="submit"
-                className="px-6 py-3 bg-brand-gradient text-white font-semibold text-sm rounded-xl hover:opacity-90 transition-opacity whitespace-nowrap"
-              >
-                Subscribe
-              </button>
-            </form>
+            <NewsletterInline />
             <p id="newsletter-hint" className="text-xs text-white/30 mt-3">
               No spam. Performance marketing insights only. Unsubscribe anytime.
             </p>

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { GradientText } from "@/components/ui/GradientText";
 import { Button } from "@/components/ui/Button";
+import { NewsletterInline } from "@/components/forms/NewsletterInline";
 
 export const metadata: Metadata = {
   title: "Resources & Insights — PerformX",
@@ -45,8 +46,7 @@ export default function ResourcesPage() {
             We're building out our editorial library. In the meantime, subscribe to get notified when we publish — or get in touch directly.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 max-w-md mx-auto">
-            <input type="email" placeholder="your@email.com" className="flex-1 w-full bg-white/5 border border-white/10 text-white placeholder:text-white/25 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-violet/60 transition-colors" aria-label="Email for newsletter" />
-            <Button variant="primary" size="md">Notify me</Button>
+            <NewsletterInline />
           </div>
         </div>
       </div>
